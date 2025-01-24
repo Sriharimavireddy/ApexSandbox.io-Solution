@@ -4,5 +4,5 @@ public Boolean isEndWithZero(Integer num){
          return true;
      }
      else return false;
-     }
+     
 }

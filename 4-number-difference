@@ -1,5 +1,6 @@
 public Integer diff(Integer a, Integer b) {
     integer c =0;
+    //math.abs is used as modules function 
     c = Math.abs(a-b);
      return c;
 }

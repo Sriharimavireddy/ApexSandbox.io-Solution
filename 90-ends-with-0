@@ -1,0 +1,8 @@
+public Boolean isEndWithZero(Integer num){
+     //code here
+     if(num.EndsWith(0)){
+         return true;
+     }
+     else return false;
+     }
+}

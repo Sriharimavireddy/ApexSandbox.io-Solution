@@ -12,4 +12,3 @@ public String ageGroup(Integer n) {
             return 'Adult';
         }
     }
-}

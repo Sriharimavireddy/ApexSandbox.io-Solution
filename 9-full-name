@@ -2,6 +2,6 @@ public String formatName(String firstName, String lastName) {
     //code here
 
     if(firstName !='' && lastName !=''){
-        return firstName + lastName;
+        return firstName +''+ lastName;
     }
 }

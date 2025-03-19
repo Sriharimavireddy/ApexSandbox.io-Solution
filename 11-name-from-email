@@ -1,6 +1,6 @@
 public String nameFromEmail(String email) {
     //code here
 
-    const Name = email.split('@') [0];
+    const name = email.split('@') [0];
     const[firstName , lastName] = email.split('.');
     return firstName+' '+lastName;

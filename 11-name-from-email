@@ -2,7 +2,7 @@ public String nameFromEmail(String email) {
    String namePart = email.split('@')[0];
     
     // Split the name part by period to get first name and last name
-    List<String> nameParts = namePart.split('\\.');
+    List<String> nameParts = namePart.split('.');
     String firstName = nameParts[0];
     String lastName = nameParts[1];
     

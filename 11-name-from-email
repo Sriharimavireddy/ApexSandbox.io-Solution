@@ -1,7 +1,13 @@
 public String nameFromEmail(String email) {
-    //code here
-
-    const name = email.split('@') [0];
-    const[firstName , lastName] = email.split('.');
-    return firstName+' '+lastName;
+    const namePart = email.split('@')[0];
+    
+    // Split the name part by period to get first name and last name
+    const [firstName, lastName] = namePart.split('.');
+    
+    // Capitalize the first letter of each name and make the rest lowercase
+    const capitalizedFirstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+    const capitalizedLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+    
+    // Combine and return the full name
+    return `${capitalizedFirstName} ${capitalizedLastName}`;
 }

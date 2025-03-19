@@ -1,0 +1,6 @@
+public String nameFromEmail(String email) {
+    //code here
+
+    const Name = email.split('@') [1];
+    Return Name;
+}

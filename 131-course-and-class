@@ -10,7 +10,7 @@ public void createCourseAndClass(String name, String description) {
     apxio__Class__c classNew = new apxio__Class__c();
     classNew.Name = name;
     if(description.length() > 225){
-        String newString = description.left(255);
+        String newStr = description.left(255);
     }
     classNew.apxio__Description__c = newString;
     classNew.apxio__Course__c = courseList.id;

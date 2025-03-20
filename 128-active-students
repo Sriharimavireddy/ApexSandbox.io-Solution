@@ -3,5 +3,5 @@ public List<apxio__Student__c> selectActiveStudents() {
 
     List<apxio__Student__c> activeList = [SELECT id,name,apxio__Active__c FROM apxio__Student__c WHERE apxio__Student__c = true];
         
-        return 
+        return activeList;
 }

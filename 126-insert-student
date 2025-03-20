@@ -6,6 +6,6 @@ public Id insertStudent(String name, String email) {
 
     insert studnetnew;
 
-    return studnetnew.id;
+    return [SELECT id from apxio_Student__c where Name =name AND apxio__Email__c= email];
 
 }

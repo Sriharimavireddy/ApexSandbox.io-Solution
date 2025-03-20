@@ -3,16 +3,20 @@ public void createCourseAndClass(String name, String description) {
 
     apxio__Course__c courseList = new apxio__Course__c();
     courseList.Name = name;
+    if(description!= null){
     courseList.apxio__Course_Details__c = description;
+    }
 
     insert courseList;
     
     apxio__Class__c classNew = new apxio__Class__c();
     classNew.Name = name;
+    if(description!= null){
 
     String newStr = (description.length() > 225) ? description.left(255) : description;
     
     classNew.apxio__Description__c = newStr;
+    }
     classNew.apxio__Course__c = courseList.id;
 
     insert classNew;

@@ -3,7 +3,7 @@ public String registerStudent(String name, String phone, String email) {
 
     List<apxio__Student__c> studentList = new List<apxio__Student__c>();
 
-    apxio__Student__c StundetAcc = new apxio__Student__c():
+    apxio__Student__c StundetAcc = new apxio__Student__c();
     StundetAcc.Name = name;
     StundetAcc.apxio__Phone__c = phone;
     StundetAcc.apxio__Email__c = email;
@@ -12,6 +12,7 @@ public String registerStudent(String name, String phone, String email) {
 
     insert studentList;
 
-    return StundetAcc.apxio__Registration_Number__c;
+    return [SELECT apxio__Registration_Number__c from apxio__Student__c 
+            WHERE Name = name AND apxio__Phone__c= phone AND apxio__Email__c = email];
 
 }

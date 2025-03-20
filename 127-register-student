@@ -13,6 +13,6 @@ public String registerStudent(String name, String phone, String email) {
     insert studentList;
 
     return [SELECT apxio__Registration_Number__c from apxio__Student__c 
-            WHERE Name = name AND apxio__Phone__c= phone AND apxio__Email__c = email];
+            WHERE id =:StundetAcc.id LIMIT 1];
 
 }

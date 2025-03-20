@@ -1,15 +1,18 @@
 public Id insertStudent(String name, String email) {
-    // code here
-   List<apxio__Student__c>  studnetList = new List<apxio__Student__c>();
+    // Create a list to hold the student record(s)
+    List<apxio__Student__c> studentList = new List<apxio__Student__c>();
 
-   apxio__Student__c studnetnew = new apxio__Student__c();
-    studnetnew.Name = name;
-    studnetnew.apxio__Email__c = email;
+    // Create a new student record
+    apxio__Student__c studentNew = new apxio__Student__c();
+    studentNew.Name = name;
+    studentNew.apxio__Email__c = email;
 
-    studnetList.add(studnetnew);
+    // Add the record to our list
+    studentList.add(studentNew);
 
-    insert studnetList;
+    // Insert the list of records
+    insert studentList;
 
-    return [SELECT id from apxio_Student__c where Name =name AND apxio__Email__c= email];
-
+    // Return the Id directly from the record
+    return studentNew.Id;
 }

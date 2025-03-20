@@ -1,0 +1,21 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    // code here
+
+    List<apxio__Course__c> courseList = new List<apxio__Course__c>();
+
+    apxio__Course__c courseAdd = new apxio__Course__c();
+
+    courseAdd.Name = name;
+    courseAdd.apxio__Course_Details__c = details;
+    if(credits == 1 || credits == 2 || credits == 3 || credits == 4 ){
+       courseAdd.apxio__Credits__c = credits;
+    }else {
+        courseAdd.apxio__Credits__c = null;
+    }
+
+    courseList.add(courseAdd);
+
+   insert courseList;
+
+   return courseAdd.id;
+}

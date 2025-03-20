@@ -9,7 +9,10 @@ public void createCourseAndClass(String name, String description) {
     
     apxio__Class__c classNew = new apxio__Class__c();
     classNew.Name = name;
-    classNew.apxio__Description__c = description;
+    if(description.legth > 225){
+        String newString = description.subString(0,254);
+    }
+    classNew.apxio__Description__c = newString;
     classNew.apxio__Course__c = courseList.id;
 
     insert classNew;

@@ -2,7 +2,7 @@ public Id classFromCourse(String courseName) {
     // code here
 apxio__Class__c classnew = new apxio__Class__c();
 
-classnew.courseName = courseName;
+classnew.Name = courseName;
 
 apxio__Class__c.apxio__Course__c = [SELECT id from apxio__Course__c WHERE Name =:courseName ];
 

@@ -1,11 +1,12 @@
 public Id insertStudent(String name, String email) {
-    // code here
-    apxio__Student__c  studnetnew = new apxio__Student__c ();
+    // Create a new student record
+    apxio__Student__c studnetnew = new apxio__Student__c();
     studnetnew.Name = name;
     studnetnew.apxio__Email__c = email;
 
+    // Insert the record
     insert studnetnew;
-
-    return [SELECT id from apxio_Student__c where Name =name AND apxio__Email__c= email];
-
+    
+    // Return the Id directly from the record
+    return studnetnew.Id;
 }

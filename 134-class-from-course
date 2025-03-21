@@ -17,6 +17,6 @@ classnew.apxio__Course__c = newCourse.Id;
 
 Insert classnew;
 return classnew.Id;
-}
+
 
 }

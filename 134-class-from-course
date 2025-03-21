@@ -1,14 +1,17 @@
 public Id classFromCourse(String courseName) {
-    // code here
+
+    List<apxio__Course__c> courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName];
+
+if(courseClassid.isEmpty()){
+    return null;
+
+}
+
+apxio__Course__c newCourse = courseClassid[0];
 apxio__Class__c classnew = new apxio__Class__c();
 
 classnew.Name = courseName;
-
-
-
-List<apxio__Course__c> courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName];
-if(courseClassid.size()>0){
-classnew.apxio__Course__c = courseClassid[0].Id;
+classnew.apxio__Course__c = newCourse.Id;
 
 
 

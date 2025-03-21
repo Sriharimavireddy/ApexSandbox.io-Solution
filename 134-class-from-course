@@ -8,6 +8,6 @@ classnew.apxio__Course__c = courseClassid.Id;
 
 
 Insert classnew;
-return courseClassid.Id;
+return classnew.Id;
 
 }

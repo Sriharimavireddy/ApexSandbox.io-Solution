@@ -1,0 +1,12 @@
+public Boolean isTypeAccount(sObject record)
+{
+    // code here
+
+    String objName = record.getSObjectType();
+    if(objName == Account){
+        return true;
+
+    }else{
+        return false;
+    }
+}

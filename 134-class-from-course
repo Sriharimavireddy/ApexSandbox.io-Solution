@@ -3,7 +3,7 @@ public Id classFromCourse(String courseName) {
 apxio__Class__c classnew = new apxio__Class__c();
 
 classnew.Name = courseName;
-apxio__Course__c courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName ];
+apxio__Course__c courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName LIMIT 1];
 classnew.apxio__Course__c = courseClassid.Id;
 
 

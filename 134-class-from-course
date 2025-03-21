@@ -6,13 +6,14 @@ classnew.Name = courseName;
 
 
 
-List<apxio__Course__c> courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName LIMIT 1];
+List<apxio__Course__c> courseClassid = [SELECT id from apxio__Course__c WHERE Name =:courseName];
 if(courseClassid.size()>0){
-classnew.apxio__Course__c = courseClassid.Id;
-}
+classnew.apxio__Course__c = courseClassid[0].Id;
+
 
 
 Insert classnew;
 return classnew.Id;
+}
 
 }

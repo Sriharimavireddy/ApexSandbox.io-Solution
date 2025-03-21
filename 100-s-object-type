@@ -2,7 +2,7 @@ public Boolean isTypeAccount(sObject record)
 {
     // code here
 
-    Schema.getSObjectType objName = record.getSObjectType();
+    Schema.SObjectType objName = record.getSObjectType();
     if(objName == Account){
         return true;
 

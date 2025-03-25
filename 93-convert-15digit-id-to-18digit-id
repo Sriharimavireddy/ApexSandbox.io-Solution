@@ -1,7 +1,7 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
     //code here
-    if(String.Length(fifteenDigit) < 15){
+    if(String.length(fifteenDigit) < 15){
         return '-1';
     }
 }

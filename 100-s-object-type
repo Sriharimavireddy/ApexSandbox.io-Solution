@@ -1,12 +1,13 @@
 public Boolean isTypeAccount(sObject record)
 {
     // code here
-
-    Schema.SObjectType objName = record.getSObjectType();
-    if(objName == 'Account'){
-        return true;
-
-    }else{
-        return false;
-    }
+if(record instanceof Account){
+    return true;
+}
+else{
+    return false;
+}
+}
+   
+    
 }

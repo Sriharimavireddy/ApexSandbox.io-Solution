@@ -3,6 +3,8 @@ public String divide(Integer a, Integer b){
 try {
     interger c = a/b;
     return stringof(c);
+}catch(nullpointerException e){
+    system.debug(e.getmessage());
 }
 
 }

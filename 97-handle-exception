@@ -3,7 +3,7 @@ public String divide(Integer a, Integer b){
 try {
     interger c = a/b;
     return String.valueOf(c);
-}catch(nullpointerException e){
+}catch(Exception e){
     system.debug(e.getmessage());
 }
 

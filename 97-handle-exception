@@ -1,10 +1,9 @@
 public String divide(Integer a, Integer b){
-    //code here
-try {
-    interger c = a/b;
-    return String.valueOf(c);
-}catch(Exception e){
-    system.debug(e.getmessage());
-}
+    try{
 
+        return a/b;
+
+    } catch(Exception e){
+             System.debug(e.getMessage());
+    }
 }

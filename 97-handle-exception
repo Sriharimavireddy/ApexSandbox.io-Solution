@@ -3,7 +3,7 @@ public String divide(Integer a, Integer b){
 
         return String.valueOf(a/b);
 
-    } catch(Exception e){
-             System.debug('Message ' + e.getMessage());
+    }catch(Exception e){
+             return e.getMessage();
     }
 }

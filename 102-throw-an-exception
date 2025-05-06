@@ -1,0 +1,27 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here 
+    //billingcity != null return original list.
+    //list == null  retuen built in illegalargumentexception
+    // if billingcity == null - accountexception
+
+    try{
+        for(Account acc :accounts){
+            if(acc.size()== 0){
+                catch(IllegalArgumentException  e);  
+            }
+           else if(acc.billingcity == null){
+                throw new AccountException('Invalid BillingCity');
+            }else if(acc.billingcity != null){
+
+                return accounts;
+             
+            }else{
+                return 'none of them';
+            }
+        }
+    }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
